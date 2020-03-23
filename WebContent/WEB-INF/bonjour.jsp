@@ -6,7 +6,11 @@
 </head>
 <body>
 <%@ include file="menu.jsp" %>
-	<c:if test="${ !empty erreur }"><p style="color:red;"><c:out value="${ erreur }" /></p></c:if>
+	<c:if test="${ !empty erreur }">
+		<p style="color:red;">
+			<c:out value="${ erreur }" />
+		</p>
+	</c:if>
 	<form method="post" action="bonjour">
         <p>
             <label for="nom">Ton nom simplet : </label>
@@ -22,7 +26,9 @@
     
     <ul>
         <c:forEach var="utilisateur" items="${ utilisateurs }">
-            <li><c:out value="${ utilisateur.prenom }" /> <c:out value="${ utilisateur.nom }" /></li>
+            	<li>
+		    <c:out value="${ utilisateur.prenom }" /> <c:out value="${ utilisateur.nom }" />
+		</li>
         </c:forEach>
     </ul>  
 
