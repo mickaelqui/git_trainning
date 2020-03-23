@@ -13,7 +13,7 @@
             <input type="text" name="nom" id="nom" />
         </p>
         <p>
-            <label for="prenom">Prénom : </label>
+            <label for="prenom">Ton prÃ©nom simplet : </label>
             <input type="text" name="prenom" id="prenom" />
         </p>
         
