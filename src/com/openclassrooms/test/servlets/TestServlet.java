@@ -18,7 +18,7 @@ import com.openclassrooms.test.dao.UtilisateurDao;
 /**
  * Servlet implementation class TestServelt
  */
-@WebServlet("/TestServelt")
+@WebServlet(name = "TestServlet", urlPatterns = "/bonjour" )
 public class TestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UtilisateurDao utilisateurDao;
