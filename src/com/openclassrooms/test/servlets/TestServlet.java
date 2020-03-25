@@ -32,8 +32,12 @@ public class TestServlet extends HttpServlet {
     }
     
     public void init() throws ServletException {
-        DaoFactory daoFactory = DaoFactory.getInstance();
-        this.utilisateurDao = daoFactory.getUtilisateurDao();
+    	try {
+    		DaoFactory daoFactory = DaoFactory.getInstance();
+        	this.utilisateurDao = daoFactory.getUtilisateurDao();
+    	}catch (DaoException e) {
+    		throw new ServletException(e);
+    	}
     }
 
 
